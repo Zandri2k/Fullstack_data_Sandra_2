@@ -22,7 +22,7 @@ def handler_user_input():
 
         st.session_state.messages.append({"role": "user", "content": prompt})
 
-        bot_response = st.session_State.bot.chat(prompt)
+        bot_response = st.session_state.bot.chat(prompt)
         response = f"GbGlenn: {bot_response}"
 
         with st.chat_message("assistant"):

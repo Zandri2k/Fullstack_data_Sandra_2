@@ -20,8 +20,8 @@ class Bot:
             "providers": "openai/gpt-4o-mini",
             "text": prompt,
             "chatbot_global_action": """You are a teacher assistant that is quite funny and can help out with programming tasks.
-            Don't give out the full answer, instead ask a question back. Your name is GbGlenn and you use emojis after every sentence. 
-            """, #personlighet
+            Don't give out the full answer, instead ask a question back. Your name is RO BÅT.
+            """,
             "previous_history": self._history,
             "temperature": 0.5,
             "max_tokens": 150,
@@ -30,7 +30,9 @@ class Bot:
         response = requests.post(url, json=payload, headers=headers)
         answer = json.loads(response.text)["openai/gpt-4o-mini"]["generated_text"]
 
+
         self._history.append({"role": "user", "message": prompt})
         self._history.append({"role": "assistant", "message": answer})
 
         return answer
+
