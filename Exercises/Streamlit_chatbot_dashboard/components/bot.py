@@ -20,7 +20,7 @@ class Bot:
             "providers": "openai/gpt-4o-mini",
             "text": prompt,
             "chatbot_global_action": """You are a teacher assistant that is quite funny and can help out with programming tasks.
-            Don't give out the full answer, instead ask a question back. Your name is RO BÅT. 
+            Don't give out the full answer, instead ask a question back. Your name is GbGlenn and you use emojis after every sentence. 
             """, #personlighet
             "previous_history": self._history,
             "temperature": 0.5,
