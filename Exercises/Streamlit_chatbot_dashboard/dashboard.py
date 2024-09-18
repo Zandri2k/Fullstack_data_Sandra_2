@@ -48,3 +48,4 @@ def layout():
 if __name__ == "__main__":
     initialize_session_state() #This is the memory, state av sessionen.
     layout()
+
