@@ -1,7 +1,7 @@
 from database import DatabaseDataFrame
-from constants import DATA_PATH
+from constants import DATA_PATH, DATABASE_PATH
 
 class QueryDatabase:
     def __init__(self, sql_query) -> None:
-        with DatabaseDataFrame(DATA_PATH) as db:
-            self.db = db.query(sql_query)
+        with DatabaseDataFrame(DATABASE_PATH) as db:
+            self.df = db.query(sql_query)
