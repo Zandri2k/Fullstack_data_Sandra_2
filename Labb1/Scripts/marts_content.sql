@@ -52,4 +52,4 @@ FROM
 
 SELECT * FROM marts.city_overview co ;
 
-ALTER TABLE marts.viewer_age_distribution RENAME TO viewer_sex_distribution;
+ALTER TABLE marts.viewer_age_distributin RENAME TO viewer_age_distribution;
