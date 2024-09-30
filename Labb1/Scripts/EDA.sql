@@ -1,4 +1,4 @@
-SELECT  * FROM  datum.totalt;
+SELECT  * FROM  innehall.tabelldata t 
 
 
 WITH 
@@ -60,7 +60,7 @@ GROUP BY
 ORDER BY
 	SUM (Visningar)
 	
---
+--shows the unit and amount of views
 SELECT
 	Enhetstyp, 
 	SUM(visningar)
@@ -75,9 +75,26 @@ GROUP BY
 ORDER BY 
 	SUM(visningar);
 
+SELECT * FROM operativsystem.tabelldata t ;
+
+-- shows the OS and views between two specific dates
+SELECT operativsystem, SUM(visningar) as visningar
+FROM operativsystem.diagramdata 
+WHERE Datum BETWEEN '2024-08-19' AND '2024-09-07'
+GROUP BY Operativsystem 
+ORDER BY SUM(Visningar) ;
 
 
+SELECT  * FROM geografi.tabelldata t ;
 
+SELECT * FROM innehall.totalt t ;
 
+SELECT * FROM prenumerationskalla.diagramdata d ;
 
+SELECT * FROM tittare.tabelldata_alder ta 
 
+SELECT  * FROM  tittare.tabelldata_kon tk ;
+
+SELECT * FROM stader.totalt t ;
+
+SELECT  * FROM  stader.tabelldata t ;
