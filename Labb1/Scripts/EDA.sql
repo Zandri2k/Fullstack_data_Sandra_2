@@ -98,3 +98,5 @@ SELECT  * FROM  tittare.tabelldata_kon tk ;
 SELECT * FROM stader.totalt t ;
 
 SELECT  * FROM  stader.tabelldata ;
+
+SELECT  * FROM innehall.diagramdata  ;
