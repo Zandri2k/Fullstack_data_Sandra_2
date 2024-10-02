@@ -60,6 +60,15 @@ SELECT * FROM marts.viewer_sex_distribution vsd ;
 
 SELECT * FROM  information_schema.tables WHERE table_schema = 'marts';
 
+CREATE TABLE IF NOT EXISTS marts.subscription_overview AS(
+SELECT
+	Prenumerationsstatus,
+	visningar,
+	"visningstid (timmar)",
+	"Genomsnittlig visningslängd"
+FROM
+	prenumerationsstatus.tabelldata t);
+
 
 
 

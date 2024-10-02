@@ -100,3 +100,5 @@ SELECT * FROM stader.totalt t ;
 SELECT  * FROM  stader.tabelldata ;
 
 SELECT  * FROM innehall.diagramdata  ;
+
+SELECT * FROM prenumerationsstatus.tabelldata t ;

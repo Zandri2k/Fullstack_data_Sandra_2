@@ -34,8 +34,9 @@ class GenderKPI:
     def display_content(self):
         df = self._content.df 
 
+        st.markdown("## KPIer över könsfördelning")
+        st.markdown("KPIn nedanför visar könsfördelningen över youtubekanalen")
         st.dataframe(df)
-        st.markdown("### ")
 
 
 class AgeKPI:
@@ -45,4 +46,17 @@ class AgeKPI:
     def display_content(self):
         df = self._content.df
 
+        st.markdown("## KPI över åldersfördelningen")
+        st.markdown("KPIn nedanför visar åldersfördelningen över youtubekanalen")
         st.dataframe(df)
+
+
+class SubscriptionKPI:
+    def __init__(self) -> None:
+        self._content = QueryDatabase("SELECT * FROM marts.subscription_overview;")
+
+    def display_content(self):
+        df = self._content.df
+
+        st.markdown("## Prenumerationsstatus")
+        st.markdown("Nedanför visas data över youtubkanalens prenumarationsstatus")

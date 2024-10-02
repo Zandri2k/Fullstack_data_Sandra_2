@@ -1,6 +1,5 @@
 import streamlit as st 
-from frontend.kpi import ContentKPI
-from frontend.kpi import GenderKPI
+from frontend.kpi import ContentKPI, GenderKPI, AgeKPI, SubscriptionKPI
 from frontend.graphs import ViewsTrend
 
 
@@ -8,6 +7,8 @@ from frontend.graphs import ViewsTrend
 content_kpi = ContentKPI()
 views_graph = ViewsTrend()
 gender_kpi = GenderKPI()
+age_kpi = AgeKPI()
+subscription_kpi = SubscriptionKPI()
 
 def layout():
     st.markdown("# The data driven youtuber")
@@ -17,6 +18,11 @@ def layout():
     content_kpi.display_content()
     views_graph.display_plot()
     gender_kpi.display_content()
+    age_kpi.display_content()
+    subscription_kpi.display_content()
+
+
+
 
 if __name__ == "__main__":
     layout()
