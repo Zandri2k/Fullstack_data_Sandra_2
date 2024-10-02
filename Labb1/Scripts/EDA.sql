@@ -76,6 +76,9 @@ ORDER BY
 	SUM(visningar);
 
 SELECT * FROM operativsystem.tabelldata t ;
+SELECT * FROM operativsystem.totalt t ;
+
+
 
 -- shows the OS and views between two specific dates
 SELECT operativsystem, SUM(visningar) as visningar
@@ -95,7 +98,7 @@ SELECT * FROM tittare.tabelldata_alder ta
 
 SELECT  * FROM  tittare.tabelldata_kon tk ;
 
-SELECT * FROM stader.totalt t ;
+SELECT * FROM stader.total t ;
 
 SELECT  * FROM  stader.tabelldata ;
 

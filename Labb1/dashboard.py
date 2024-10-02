@@ -1,6 +1,6 @@
 import streamlit as st 
 from frontend.kpi import ContentKPI, GenderKPI, AgeKPI, SubscriptionKPI
-from frontend.graphs import ViewsTrend, SubscriptionChart, AgeChart
+from frontend.graphs import ViewsTrend, SubscriptionChart, AgeChart, OperatingSystemChart
 
 
 # device_kpi = DeviceKPI()
@@ -14,6 +14,8 @@ age_kpi = AgeKPI()
 
 subscription_kpi = SubscriptionKPI()
 subscription_chart = SubscriptionChart()
+
+operatingSystem_chart = OperatingSystemChart()
 
 def layout():
     st.markdown("# The data driven youtuber")
@@ -30,6 +32,8 @@ def layout():
 
     subscription_kpi.display_content()
     subscription_chart.display_plot()
+
+    operatingSystem_chart.display_plot()
 
 
 

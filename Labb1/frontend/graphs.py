@@ -23,7 +23,9 @@ class AgeChart:
     def display_plot(self):
         filtered_df = self.df[['Tittarnas ålder', 'Visningar (%)']] #plockar ut columner
         st.markdown("Visualisering")
-        fig = px.bar(filtered_df, x='Tittarnas ålder', y='Visningar (%)')
+        fig = px.bar(filtered_df, 
+                     x='Tittarnas ålder', 
+                     y='Visningar (%)')
         st.plotly_chart(fig) 
 
 
@@ -40,4 +42,32 @@ class SubscriptionChart:
         st.plotly_chart(fig)
         #st.dataframe(self.df)
 
-        
+
+class OperatingSystemChart:
+    def __init__(self) -> None:
+        self.df = QueryDatabase("SELECT * FROM marts.operating_system;").df
+
+    def display_plot(self):
+        filtered_df = self.df[['Operativsystem', 'Visningar' ]]
+
+        st.markdown(" ## Info kring operativsystem")
+        st.markdown("Här visas information kring de olika operativsystemen som tittarna använt")
+
+        selected_operatingSystem = st.selectbox(
+            "välj operativsystem",
+            filtered_df['Operativsystem'].unique()
+        )
+
+        fig = px.bar(
+            filtered_df,
+            x="Operativsystem", 
+            y="Visningar", 
+            title="Totala visningar per Operativsystem",
+            labels={"Operativsystem": "Operativsystem", "Visningar": "Visningar"},
+            color="Visningar"  
+        )
+
+        for data in fig.data:
+            data.marker.opacity = [1 if os == selected_operatingSystem else 0.5 for os in filtered_df['Operativsystem']]
+
+        st.plotly_chart(fig)

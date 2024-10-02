@@ -61,3 +61,8 @@ class SubscriptionKPI:
         st.markdown("## Prenumerationsstatus")
         st.markdown("Här visualiseras data över youtubkanalens prenumarationsstatus")
         st.dataframe(df)
+
+
+
+
+       

@@ -69,6 +69,16 @@ SELECT
 FROM
 	prenumerationsstatus.tabelldata t);
 
+CREATE TABLE IF NOT EXISTS marts.operating_system AS(
+SELECT 
+	Operativsystem,
+	Visningar,
+	"Visningstid (timmar)",
+	"Genomsnittlig visningslängd"
+FROM
+	operativsystem.tabelldata t);
 
 
+
+SELECT * FROM marts.operating_system;
 
