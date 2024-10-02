@@ -36,12 +36,13 @@ CREATE TABLE IF NOT EXISTS marts.viewer_sex_distribution AS (
 SELECT
 	"Tittarnas kön",
 	"Visningar (%)",
-	"Genomsnittlig visningslängd"
+	"Genomsnittlig visningslängd",
+	"Visningstid (timmar) (%)"
 FROM
 	tittare.tabelldata_alder tk);
 
 
-CREATE TABLE IF NOT EXISTS marts.viewer_age_distributin AS(
+CREATE TABLE IF NOT EXISTS marts.viewer_age_distribution AS(
 SELECT
 	"Tittarnas ålder",
 	"Visningar (%)",
@@ -52,4 +53,13 @@ FROM
 
 SELECT * FROM marts.city_overview co ;
 
-ALTER TABLE marts.viewer_age_distributin RENAME TO viewer_age_distribution;
+DROP TABLE marts.viewer_sex_distribution; 
+
+SELECT * FROM marts.viewer_age_distribution vad ;
+SELECT * FROM marts.viewer_sex_distribution vsd ;
+
+SELECT * FROM  information_schema.tables WHERE table_schema = 'marts';
+
+
+
+

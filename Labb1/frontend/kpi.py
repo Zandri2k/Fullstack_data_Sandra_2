@@ -35,6 +35,7 @@ class GenderKPI:
         df = self._content.df 
 
         st.dataframe(df)
+        st.markdown("### ")
 
 
 class AgeKPI:
