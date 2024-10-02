@@ -1,6 +1,6 @@
 import streamlit as st 
 from frontend.kpi import ContentKPI, GenderKPI, AgeKPI, SubscriptionKPI
-from frontend.graphs import ViewsTrend, SubscriptionChart, GenderChart
+from frontend.graphs import ViewsTrend, SubscriptionChart, AgeChart
 
 
 # device_kpi = DeviceKPI()
@@ -8,8 +8,8 @@ content_kpi = ContentKPI()
 views_graph = ViewsTrend()
 
 gender_kpi = GenderKPI()
-gender_chart = GenderChart()
 
+age_chart = AgeChart()
 age_kpi = AgeKPI()
 
 subscription_kpi = SubscriptionKPI()
@@ -22,8 +22,12 @@ def layout():
     # device_kpi.display_device_summary()
     content_kpi.display_content()
     views_graph.display_plot()
+
     gender_kpi.display_content()
+
     age_kpi.display_content()
+    age_chart.display_plot()
+
     subscription_kpi.display_content()
     subscription_chart.display_plot()
 
