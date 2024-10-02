@@ -34,7 +34,7 @@ class GenderKPI:
     def display_content(self):
         df = self._content.df 
 
-        st.markdown("## KPIer över könsfördelning")
+        st.markdown("## KPIer över köns och åldersfördelning")
         st.markdown("KPIn nedanför visar könsfördelningen över youtubekanalen")
         st.dataframe(df)
 
@@ -46,10 +46,10 @@ class AgeKPI:
     def display_content(self):
         df = self._content.df
 
-        st.markdown("## KPI över åldersfördelningen")
+        #st.markdown("## KPI över åldersfördelningen")
         st.markdown("KPIn nedanför visar åldersfördelningen över youtubekanalen")
         st.dataframe(df)
-
+ 
 
 class SubscriptionKPI:
     def __init__(self) -> None:
@@ -59,4 +59,5 @@ class SubscriptionKPI:
         df = self._content.df
 
         st.markdown("## Prenumerationsstatus")
-        st.markdown("Nedanför visas data över youtubkanalens prenumarationsstatus")
+        st.markdown("Här visualiseras data över youtubkanalens prenumarationsstatus")
+        st.dataframe(df)
