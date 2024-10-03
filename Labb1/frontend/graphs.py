@@ -64,9 +64,10 @@ class OperatingSystemChart:
             y="Visningar", 
             title="Totala visningar per Operativsystem",
             labels={"Operativsystem": "Operativsystem", "Visningar": "Visningar"},
-            color="Visningar"  
+            #color= "red"  
         )
 
+        fig.update_layout(bargap=0.3, bargroupgap=0.1)
         for data in fig.data:
             data.marker.opacity = [1 if os == selected_operatingSystem else 0.5 for os in filtered_df['Operativsystem']]
 

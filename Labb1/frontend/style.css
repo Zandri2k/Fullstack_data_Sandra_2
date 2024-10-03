@@ -1,0 +1,14 @@
+h1,h2,h3{
+
+    color: rgb(126, 141, 148);
+
+}
+
+.stApp{
+    background-color: rgb(186, 207, 217);
+
+}
+
+.element-container {
+    opacity: 0.7; /* 80% opacity */
+}

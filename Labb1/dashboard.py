@@ -1,4 +1,5 @@
 import streamlit as st 
+from pathlib import Path
 from frontend.kpi import ContentKPI, GenderKPI, AgeKPI, SubscriptionKPI
 from frontend.graphs import ViewsTrend, SubscriptionChart, AgeChart, OperatingSystemChart
 
@@ -34,9 +35,17 @@ def layout():
     subscription_chart.display_plot()
 
     operatingSystem_chart.display_plot()
+    
 
+def read_css():
+    css_path = Path(__file__).parent/"frontend"/ "style.css"
+    print(css_path)
 
-
-
+    with open(css_path) as css:
+        st.markdown(
+            f"<style>{css.read()}</style>",
+            unsafe_allow_html=True,
+        )
+read_css()
 if __name__ == "__main__":
-    layout()
+    layout() 
