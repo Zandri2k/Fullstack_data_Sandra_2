@@ -35,6 +35,7 @@ def layout():
     subscription_chart.display_plot()
 
     operatingSystem_chart.display_plot()
+    read_css()
     
 
 def read_css():
@@ -46,6 +47,9 @@ def read_css():
             f"<style>{css.read()}</style>",
             unsafe_allow_html=True,
         )
-read_css()
+
+
+
+
 if __name__ == "__main__":
     layout() 

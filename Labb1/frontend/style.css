@@ -1,14 +1,57 @@
-h1,h2,h3{
+h1{
 
-    color: rgb(126, 141, 148);
+    
+    color: black;
+    text-shadow: none;
+}
+
+h2{
+    color: rgb(57, 63, 66);
+    text-shadow: none;
 
 }
 
+h3{
+    color: rgb(57, 63, 66);
+    text-shadow: none;
+
+
+}
+
+/* Bakground*/
 .stApp{
     background-color: rgb(186, 207, 217);
+    opacity: 0.7;
 
 }
 
-.element-container {
-    opacity: 0.7; /* 80% opacity */
+
+/* KPI Container: Rounded Corners and Shadows */
+div[data-testid="metric-container"] {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.678);
+    border-radius: 15px; /* Rounded corners for KPIs */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Box shadow for KPIs */
+    margin: 10px;
+   
 }
+
+/*Rounded Corners och Shadows */
+.element-container .stPlotlyChart, 
+.element-container .stAltairChart, 
+.element-container .stPydeckChart, 
+.element-container .stVegaLiteChart {
+    background-color: white;
+    border-radius: 20px; /* Rounded corners for charts */
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for charts */
+    margin-bottom: 20px;
+   
+}
+
+.element-container .stPlotlyChart > div {
+    border-radius: 15px; /* Round the actual graph */
+    overflow: hidden;    /* Clip any content overflowing from the rounded border */
+}
+
+
